@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.bushemi.proto";
+
+service WebResourceTouch {
+    rpc touch(TouchRequest) returns (TouchResponse);
+}
+
+message TouchRequest {
+    string url = 1;
+}
+
+message TouchResponse {
+    int32 responseCode = 1;
+    int32 responseTime = 2;
+}
